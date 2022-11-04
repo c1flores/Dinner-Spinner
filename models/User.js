@@ -4,7 +4,7 @@ const sequelize = require('../config/connection');
 
 class User extends Model {}
 
-Shopper.init(
+User.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -30,10 +30,6 @@ Shopper.init(
             validate: {
                 len:[1],
             }
-        },
-        description: {
-            type: DataTypes.STRING,
-
         },
     },
     {
