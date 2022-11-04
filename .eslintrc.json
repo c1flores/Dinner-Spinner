@@ -35,5 +35,8 @@
       "radix": "off"
     },
     "extends": ["prettier"]
+      "semi": ["error", "always"],
+      "radix": "off"
+    }
   }
   
