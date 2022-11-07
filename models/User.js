@@ -10,7 +10,7 @@ User.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            outoIncrement: true,
+            autoIncrement: true,
         },
         name: {
             type: DataTypes.STRING,
@@ -60,7 +60,7 @@ User.init(
           timestamps: false,
           freezeTableName: true,
           underscored: true,
-          modelName: 'user',
+          modelName: 'User',
         }
       );
 
