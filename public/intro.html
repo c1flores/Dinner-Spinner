@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinner-Spinner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/flatly/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="home">Dinner-Spinner</h1>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="choices">
+                <p class="explore">Explore Recipes</p>
+                <p class="recent">Recent Reciptes</p>
+                <p class="add">Add a Recipe</p>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="Explore Recipe">
+        <img>
+        <h2 class="recipes">Recipes</h2>
+        <input type="text" placeholder="Find a recipe..." id="inputValue" class="searchRecipe">
+        <input type="submit" value="Search" id="button" class="my-1">
+    </div>
+
+    <div class="Recent Recipe">
+        <h2 class="recipeName"></h2>
+        <div class="ingredients"></div>
+    </div>
+
+    <div class="Add a Recipe">
+        <h2 class="creatingRecipe">Add a Recipe</h2>
+        <input type="text" placeholder="Recipe Name" id="recipeName" class="recipeName">
+        <input type="text" placeholder="Ingredient" id="ingredient" class="ingredient">
+        <input type="text" placeholder="oz" id="amount" class="amount">
+        <div class="moreIngredients"></div>
+        <input type="submit" value="add ingredient" id="add" class="my-1">
+        
+        <input type="submit" value="Submit" id="button2" class="my-1">
+    </div>
+    <footer class="website-name">
+        <p>©2022 Dinner-Spinner</p>
+    </footer>
+    <script src="./assets/script.js"></script>
+</body>
+</html>
