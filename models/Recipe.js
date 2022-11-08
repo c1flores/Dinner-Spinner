@@ -40,7 +40,37 @@ Recipe.init(
           }, 
           ingFiveOz: {
             type: DataTypes.STRING
-          }, 
+          },
+          ingSix: {
+            type: DataTypes.STRING
+          },
+          ingSixOz: {
+            type: DataTypes.STRING
+          },
+          ingSeven: {
+            type: DataTypes.STRING
+          },
+          ingSevenOz: {
+            type: DataTypes.STRING
+          },
+          ingEight: {
+            type: DataTypes.STRING
+          },
+          ingEightOz: {
+            type: DataTypes.STRING
+          },
+          ingNine: {
+            type: DataTypes.STRING
+          },
+          ingNine: {
+            type: DataTypes.STRING
+          },   
+          ingTen: {
+            type: DataTypes.STRING
+          },
+          ingTenOz: {
+            type: DataTypes.STRING
+          },
           recipeNotes: {
             type: DataTypes.STRING
           },
