@@ -22,8 +22,14 @@
     <!-- Nav Menu -->
     <header>
       <a class="navbar-icon" href="#">
-            <img src="public/assets/img/icon.jpg" width="30" height="30" alt="">
+            <img src="/public/assets/img/icon.jpg" width="30" height="30" alt="">
        </a>
+        {{#if logged_in}}
+        <a href="/profile">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
        {{#if logged_in}}
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
