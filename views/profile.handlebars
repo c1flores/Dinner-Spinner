@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-auto">
+        <h2>Hello, {{name}} </h2>
+    </div>
+</div>
+
+<div class="row ">
+    <div class="col-md-6">
+        <h3>Talk about you new favorit recipe:</h3>
+
+        <form class="from new-recipe-form">
+            <div class="form-group">
+                <label for="recipe-name">recipe-name:</label>
+                <input class="form-input" type="text" id="recipe-name" name="recipe-name"/>
+            </div>
+            <div class="form-group">
+                <label for="recipe-instr">Instructions:</label>
+                <textarea class="form-input" id="recipe-instr" name="recipe-instr"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Share</button>
+            </div>
+        </form>
+    </div>
+
+    {{#if recipe.length}}
+    <div class="col-md-6 recipe-list">
+        <h3>Favorit Recipes:</h3>
+
+        {{#each recipe as |recipe|}}
+        <div class="row mb-2">
+            <div class="col-md-8">
+                <h4><a href="/recipe/{{recipe.id}}">{{recipe.name}}</a></h4>
+            </div>
+        <div class="col-md-4">
+            <button class="btn btn-sm btn-danger" data-id="{{recipe.id}}"DELETE></button>
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
+</div>
+
+<script scr="./js/profile.js"></script>
