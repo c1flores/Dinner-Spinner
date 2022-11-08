@@ -6,7 +6,7 @@ class Recipe extends Model {}
 Recipe.init(
     {
         recipeName: {
-            type: DataTypes.String,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         ingOne: {
