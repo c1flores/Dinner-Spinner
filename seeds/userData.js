@@ -3,19 +3,23 @@ const { User } = require('../models');
 const userdata = [
     {
         name: 'Daniel Gutierrez',
-        email: 'leinad6ix.z@gmail.com'
+        email: 'leinad6ix.z@gmail.com',
+        password:'123456789'
     },
     {
         name: 'Christian Flores',
-        email: 'c1flores@ucsd.edu'
+        email: 'c1flores@ucsd.edu',
+        password:'123456789'
     },
     {
         name: 'William Paulovitz',
-        email: 'wplovitz@gmail.com'
+        email: 'wplovitz@gmail.com',
+        password:'123456789'
     },
     {
         name: 'Lee Jongwon',
-        email: 'jongwonlee12345@gmail.com'
+        email: 'jongwonlee12345@gmail.com',
+        password:'123456789'
     }
 ]
 
