@@ -1,0 +1,56 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore Cocktails</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="public/assets/css/style.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <!-- Nav Menu -->
+    <header>
+      <a class="navbar-icon" href="#">
+            <img src="public/assets/img/icon.jpg" width="30" height="30" alt="">
+       </a>
+       {{#if logged_in}}
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+          
+          <ul class="navbar-nav">
+            <li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Add a Recipe<span
+                  class="sr-only"
+                ></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Recently Added</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      {{/if}}
+    </header>
+
+    <main class="col-auto">
+      {{{body}}}
+    </main>
+
+    <footer class="flex-row justify-center">
+    </footer>
+  </body>
+
+</html>
+<script src="/javascript/logout.js"></script>
