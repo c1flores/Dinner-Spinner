@@ -14,43 +14,27 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
       rel="stylesheet"
     />
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   </head>
 
   <body>
     <!-- Nav Menu -->
-    <header>
-      <a class="navbar-icon" href="#">
-            <img src="../public/img/icon.jpg" width="30" height="30" alt="">
-       </a>
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-       {{#if logged_in}}
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
-          
-          <ul class="navbar-nav">
-            <li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Add a Recipe<span
-                  class="sr-only"
-                ></span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Recently Added</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      {{/if}}
-    </header>
 
-    <main class="col-auto">
+    <div class="ui fixed menu">
+      <div class="ui container">
+        <a class="item hugeText header" href="/">Explore Recipes</a>
+        {{#if logged_in}}
+          <a href="/profile">profile</a>
+          |
+          <button class="no-button" id="logout">Logout</button>
+          <a class="item theFont right aligned" id="addRecipe">Add a Recipe</a>
+          <a class="item theFont" id="recentAdd">Recently Added</a>
+        {{else}}
+          <a class="item theFont right aligned" href="/login">Login</a>
+        {{/if}}
+      </div>
+    </div>
+
+    <main>
       {{{body}}}
     </main>
 

@@ -1,22 +1,35 @@
-<div class="col-md-6">
-    <h2>Signup</h2>
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h2 class="ui teal image header">
+      <div class="content">
+        Sign-Up
+      </div>
+    </h2>
+    <form class="ui large form">
+      <div class="ui stacked segment">
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="address book icon"></i>
+            <input type="text" name="name" placeholder="Name" />
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="at icon"></i>
+            <input type="text" name="email" placeholder="Email" />
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input type="password" name="password" placeholder="Password" />
+          </div>
+        </div>
+        <div class="ui fluid large teal submit button">Sign-Up</div>
+      </div>
 
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="name-signup">name:</label>
-        <input class="form-input" type="text" id="name-signup" />
-      </div>
-      <div class="form-group">
-        <label for="email-signup">email:</label>
-        <input class="form-input" type="text" id="email-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
-      </div>
+      <div class="ui error message"></div>
+
     </form>
   </div>
 </div>
