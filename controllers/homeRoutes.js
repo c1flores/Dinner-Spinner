@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Recipe, User  } = require('../models');
+const withAuth = require("../utils/auth");
 
 router.get('/', async (req, res) => {
     try {
@@ -45,9 +46,8 @@ router.get('recipe/:id', async (req, res) => {
     }
 });
 
-router.get('/profile', async (req, res) => {
+router.get('/profile', withAuth , async (req, res) => {
     try {
-
         const userData = await User.FindByPk(req.session.user_id, {
             attributes: { exclude: ['password']},
             include: [{ model: Recipe }],

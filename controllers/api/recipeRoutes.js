@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Recipe } = require('../../models');
+const withAuth = require("../../utils/auth");
 
 
 router.post('/', async (req, res) => {
@@ -14,7 +15,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-router.delete('/:id', async (req, res) => { 
+router.delete('/:id', withAuth, async (req, res) => { 
     try {
         const recipeData = await Recipe.destroy({
             where:{
@@ -24,7 +25,7 @@ router.delete('/:id', async (req, res) => {
         });
 
         if (!recipeData) {
-            res.status(404).json({ message: "no recipe found with this id "});
+            res.status(404).json({ message: "No recipe found with this id "});
             return;
         }
         res.status(200).json(recipeData);

@@ -5,7 +5,7 @@
         Log-in to your account
       </div>
     </h2>
-    <form class="ui large form">
+    <form class="ui large form" id="login-form">
       <div class="ui stacked segment">
         <div class="field">
           <div class="ui left icon input">
@@ -19,7 +19,9 @@
             <input type="password" name="password" placeholder="Password" id="password-login">
           </div>
         </div>
-        <div class="ui fluid large teal submit button">Login</div>
+        <div>
+          <button class="ui fluid large teal submit button" type="submit">Login</button>
+        </div>
       </div>
 
       <div class="ui error message"></div>
