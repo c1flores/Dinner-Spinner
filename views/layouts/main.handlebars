@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
     />
-    <link rel="stylesheet" href="public/assets/css/style.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
       rel="stylesheet"
@@ -22,14 +22,13 @@
       <div class="ui container">
         <a class="item hugeText header" href="/">Explore Recipes</a>
         {{#if logged_in}}
-          <a href="/profile">profile</a>
-          |
+          <a class="item theFont" href="/profile">profile</a>
           <button class="no-button" id="logout">Logout</button>
-          <a class="item theFont right aligned" id="addRecipe">Add a Recipe</a>
-          <a class="item theFont" id="recentAdd">Recently Added</a>
         {{else}}
           <a class="item theFont right aligned" href="/login">Login</a>
         {{/if}}
+          <button class="item theFont right aligned" id="addRecipe" href="placeholder">Add a Recipe</button>
+          <button class="item theFont" id="recentAdd" href="/placeholder">Recently Added</button>
       </div>
     </div>
 
@@ -39,6 +38,9 @@
 
     <footer class="flex-row justify-center">
     </footer>
-  </body>
+  
+  <script src="./js/logout.js"></script>
+  
+</body>
 
 </html>

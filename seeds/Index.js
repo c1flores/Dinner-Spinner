@@ -1,22 +1,22 @@
 const sequelize = require('../config/connection');
-const Recipe  = require('../models/Recipe');
-const User  = require('../models/User');
-const seedRecipe = require('./recipe-seeds.json');
-const seedUser = require('./user-seeds.json');
+const { Recipe , User } = require('../models');
+const recipeData = require('./recipe-seeds.json');
+const userData = require('./user-seeds.json');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
 
-  await Recipe.bulkCreate(seedRecipe, {
-    individualHooks: true,
-    returning: true,
-
-  });
-
-  await User.bulkCreate(seedUser, {
+  const users = await User.bulkCreate(userData, {
     individualHooks: true,
     returning: true,
   });
+
+  for(const recipe of recipeData) {
+    await Recipe.create({
+      ...recipe,
+      user_id: users[Math.floor(Math.random() * users.length)].isSoftDeleted,
+    })
+  }
 
   process.exit(0);
 };
