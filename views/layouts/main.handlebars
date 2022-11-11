@@ -17,24 +17,27 @@
 
   <body>
     <!-- Nav Menu -->
-
-    <div class="ui fixed menu">
-      <div class="ui container">
-        <a class="item hugeText header" href="/">Explore Recipes</a>
-        {{#if logged_in}}
-          <a class="item theFont" href="/profile">profile</a>
-          <button class="no-button" id="logout">Logout</button>
-        {{else}}
-          <a class="item theFont right aligned" href="/login">Login</a>
-        {{/if}}
-          <button class="item theFont right aligned" id="addRecipe" href="placeholder">Add a Recipe</button>
-          <button class="item theFont" id="recentAdd" href="/placeholder">Recently Added</button>
-      </div>
-    </div>
-
-    <main>
-      {{{body}}}
-    </main>
+<section class="hero">
+  <nav>
+        <a href="index.html"></a>
+        <div class="nav-links">
+          <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">RECIPES</a></li>
+          {{#if logged_in}}
+            <li><a href="/profile">PROFILE</a></li>
+            <li><button id="logout">LOGOUT</button></li>
+          {{else}}
+            <li><a href="/login">LOGIN</a></li>
+          {{/if}}
+          </ul>
+        </div>
+  </nav>
+</section>
+  <section>
+    {{{ body }}}
+  </section>
 
     <footer class="flex-row justify-center">
     </footer>
