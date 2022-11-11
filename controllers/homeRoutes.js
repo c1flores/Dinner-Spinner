@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
 
 router.get('recipe/:id', async (req, res) => {
     try {
-        const recipeData = await Recipe.FindByPk(req.params.id, {
+        const recipeData = await Recipe.findByPk(req.params.id, {
             include: [
                 {
                     module: User,
@@ -46,13 +46,14 @@ router.get('recipe/:id', async (req, res) => {
     }
 });
 
-router.get('/profile', withAuth , async (req, res) => {
+router.get('/profile', withAuth, async (req, res) => {
+    console.log('working')
     try {
-        const userData = await User.FindByPk(req.session.user_id, {
+        const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password']},
             include: [{ model: Recipe }],
         });
-
+        console.log('working')
         const user = userData.get({ plain: true});
 
         res.render('profile', {
@@ -60,14 +61,37 @@ router.get('/profile', withAuth , async (req, res) => {
             logged_in: true
         });
     } catch (err) {
+        console.log(err)
         res.status(500).json(err);
-    }
+   }
+
 });
+
+router.get('/addRecipe', withAuth, async (req, res) => {
+    console.log('working')
+    try {
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: { exclude: ['password']},
+            include: [{ model: Recipe }],
+        });
+        console.log('working')
+        const user = userData.get({ plain: true});
+
+        res.render('addRecipe', {
+            ...user,
+            logged_in: true
+        });
+    } catch (err) {
+        console.log(err)
+        res.status(500).json(err);
+   }
+});
+        
 
 router.get('/login', (req, res) => {
 
     if (req.session.logged_in) {
-        res.redirect('/profile');
+        res.redirect('/');
         return;
     }
 
@@ -76,11 +100,12 @@ router.get('/login', (req, res) => {
 
 router.get("/register", (req, res) => {
     if (req.session.loggedIn) {
-        res.redirect("/profile");
+        res.redirect("/");
         return;
     }
 
     res.render('register');
 });
+
 
 module.exports = router;
