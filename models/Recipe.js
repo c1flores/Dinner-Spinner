@@ -5,6 +5,12 @@ class Recipe extends Model {}
 
 Recipe.init(
     {
+      id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
+        },
         recipeName: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -88,7 +94,7 @@ Recipe.init(
           timestamps: false,
           freezeTableName: true,
           underscored: true,
-          modelName: 'Recipe',
+          modelName: 'recipe',
         }
       );
 

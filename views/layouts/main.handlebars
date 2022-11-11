@@ -22,12 +22,13 @@
       <div class="ui container">
         <a class="item hugeText header" href="/">Explore Recipes</a>
         {{#if logged_in}}
-          <a class="item theFont" href="/profile">profile</a>
+          <a class="item theFont" id="profile" href="/profile">profile</a>
           <button class="no-button" id="logout">Logout</button>
+          <a class="item theFont right aligned" id="addRecipe" href="/addRecipe">Add a Recipe</a>
         {{else}}
           <a class="item theFont right aligned" href="/login">Login</a>
         {{/if}}
-          <button class="item theFont right aligned" id="addRecipe" href="placeholder">Add a Recipe</button>
+          
           <button class="item theFont" id="recentAdd" href="/placeholder">Recently Added</button>
       </div>
     </div>
@@ -38,9 +39,9 @@
 
     <footer class="flex-row justify-center">
     </footer>
-  
+  {{#if logged_in}}
   <script src="./js/logout.js"></script>
-  
+  {{/if}}
 </body>
 
 </html>
