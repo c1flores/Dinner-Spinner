@@ -1,11 +1,16 @@
-<div class="text-center">
-    <h2>{{recipeName}}</h2>
-    <p>{{instruction}}</p>
-    <p>{{ingreadiants}}</p>
-  
-    <p>created by {{user.name}}</p>
-    <p>
-    <button class="btn favorit-button">favorit this recipe!</button>
-    </p>
+<div class="ui card">
+  <div class="content">
+    <div class="header">{{recipeName}}</div>
+    <div class="description">
+    <p>{{description}}</p>
+    <p>{{ingOne}}</p>
+    <p>{{ingOneOz}}</p>
+    <p>{{ingTwo}}</p>
+    <p>{{ingTwoOz}}</p>
+    <p>{{ingThree}}</p>
+    <p>Created by {{user.name}}</p>
+      
+    <div class="extra content">
+    <i class="heart outline icon"></i>
+    </div>
 </div>
-
