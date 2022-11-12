@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
     />
-    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
       rel="stylesheet"
@@ -17,33 +17,34 @@
 
   <body>
     <!-- Nav Menu -->
-<section class="hero">
-  <nav>
+    <section class="hero">
+      <nav>
         <a href="index.html"></a>
         <div class="nav-links">
           <ul>
-            <li><a href="/">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">RECIPES</a></li>
-          {{#if logged_in}}
-            <li><a href="/profile">PROFILE</a></li>
-            <li><button id="logout">LOGOUT</button></li>
-          {{else}}
-            <li><a href="/login">LOGIN</a></li>
-          {{/if}}
+            {{#if logged_in}}
+              <li><a href="/">HOME</a></li>
+              <li><a href="#">ABOUT</a></li>
+              <li><a href="/recipe">RECIPES</a></li>
+              <li><a href="/profile">PROFILE</a></li>
+              <li><a id="logout">LOGOUT</a></li>
+            {{else}}
+              <li><a href="/login">LOGIN</a></li>
+            {{/if}}
           </ul>
         </div>
-  </nav>
-</section>
-  <section>
-    {{{ body }}}
-  </section>
+      </nav>
+
+      <main>
+        {{{body}}}
+      </main>
+    </section>
 
     <footer class="flex-row justify-center">
     </footer>
-  {{#if logged_in}}
-  <script src="./js/logout.js"></script>
-  {{/if}}
-</body>
+    {{#if logged_in}}
+      <script src="./js/logout.js"></script>
+    {{/if}}
+  </body>
 
 </html>
