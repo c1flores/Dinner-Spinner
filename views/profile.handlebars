@@ -40,4 +40,17 @@
     {{/if}}
 </div> 
 
+
+{{#each recipes as |recipe| }}
+<div class="row mb-4 project">
+    <div class="col-md-5">
+        <h2> 
+        <a href="/recipe/{{recipe.id}}">{{recipe.recipeName}}</a>
+        </h2>
+        <p>{{recipe.instruction}}</p>
+        <p>{{recipe.ingreadiants}}</p>
+    </div> 
+</div>
+
+{{/each}}
 <script src="./js/profile.js"></script>
