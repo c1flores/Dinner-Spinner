@@ -8,6 +8,7 @@ const newFormHandler = async (event) => {
         const response = await fetch('/api/recipes', {
             method: 'POST',
             body: JSON.stringify({ recipeName, instruction}),
+            // do not change this c in content-Type
             headers: {'content-Type': 'application/json'},
         });
 
