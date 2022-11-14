@@ -10,7 +10,7 @@ const newFormHandler = async (event) => {
             method: 'POST',
             body: JSON.stringify({ recipeName, ingredients, instructions }),
             // do not change this c in content-Type
-            headers: {'content-Type': 'application/json'},
+            headers: {'Content-Type': 'application/json'},
         });
 
         if (response.ok) {
