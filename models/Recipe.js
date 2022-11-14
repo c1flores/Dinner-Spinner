@@ -15,70 +15,18 @@ Recipe.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        ingOne: {
+        ingredients: {
+          type: DataTypes.STRING,
+          allowNull: false
+        },
+        instructions: {
             type: DataTypes.STRING, 
             allowNull: false,
           },
-          ingOneOz: {
-            type: DataTypes.STRING,
+          date_created: {
+            type: DataTypes.DATE,
             allowNull: false,
-          }, 
-          ingTwo: {
-            type: DataTypes.STRING
-          }, 
-          ingTwoOz: {
-            type: DataTypes.STRING
-          }, 
-          ingThree: {
-            type: DataTypes.STRING
-          }, 
-          ingThreeOz: {
-            type: DataTypes.STRING
-          }, 
-          ingFour: {
-            type: DataTypes.STRING
-          }, 
-          ingFourOz: {
-            type: DataTypes.STRING
-          }, 
-          ingFive: {
-            type: DataTypes.STRING
-          }, 
-          ingFiveOz: {
-            type: DataTypes.STRING
-          },
-          ingSix: {
-            type: DataTypes.STRING
-          },
-          ingSixOz: {
-            type: DataTypes.STRING
-          },
-          ingSeven: {
-            type: DataTypes.STRING
-          },
-          ingSevenOz: {
-            type: DataTypes.STRING
-          },
-          ingEight: {
-            type: DataTypes.STRING
-          },
-          ingEightOz: {
-            type: DataTypes.STRING
-          },
-          ingNine: {
-            type: DataTypes.STRING
-          },
-          ingNine: {
-            type: DataTypes.STRING
-          },   
-          ingTen: {
-            type: DataTypes.STRING
-          },
-          ingTenOz: {
-            type: DataTypes.STRING
-          },
-          recipeNotes: {
-            type: DataTypes.STRING
+            defaultValue: DataTypes.NOW
           },
           user_id: {
             type: DataTypes.INTEGER,

@@ -42,18 +42,18 @@ app.use(routes);
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-      cb(null, 'upload')
+      cb(null, 'upload');
   },
   filename: (req, file, cb)=> {
       console.log(file);
-      cb(null, Date.now() + path.extname(file.originalname))
+      cb(null, Date.now() + path.extname(file.originalname));
   }
 })
 
 const upload = multer({ storage: storage });
 
 app.get("/addRecipe", (req, res) => {
-  res.render("addRecipe");
+  res.render("addRecipe")
 });
 
 app.post("/addRecipe", upload.single("image"), (req, res) => {
@@ -63,3 +63,5 @@ app.post("/addRecipe", upload.single("image"), (req, res) => {
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
+
+
