@@ -2,6 +2,7 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
+const multer = require('multer');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const routes = require('./controllers');
@@ -39,6 +40,28 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(routes);
 
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+      cb(null, 'upload');
+  },
+  filename: (req, file, cb)=> {
+      console.log(file);
+      cb(null, Date.now() + path.extname(file.originalname));
+  }
+})
+
+const upload = multer({ storage: storage });
+
+app.get("/addRecipe", (req, res) => {
+  res.render("addRecipe")
+});
+
+app.post("/addRecipe", upload.single("image"), (req, res) => {
+  
+});
+
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
+
+
