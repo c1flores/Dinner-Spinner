@@ -1,17 +1,13 @@
-
-{{#each recipe as |recipe|}}
+<!-- List of Recipes HTML -->
+{{#each recipes as |recipe|}}
   <div class="eight wide column">
     <div class="empty-div">
       <h2>
-
-        <a href="/recipes/{{recipe.id}}">{{recipe.recipeName}}</a>
+        <a href="/recipe/{{recipe.id}}">{{recipe.recipeName}}</a>
       </h2>
       <p>Created by {{recipe.user.name}} on {{format_date}}</p>
-    </div>
-    <div class="eight wide column">
-      <p>
-        {{recipe.ingredients}}
-      </p>
+      <p>{{recipe.ingredients}}</p>
+      <p>{{recipe.instructions}}</p>
     </div>
   </div>
 {{/each}}
