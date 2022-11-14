@@ -1,3 +1,4 @@
+//Import router object to handle requests, import database model(s), and import helper function
 const router = require('express').Router();
 const { Recipe } = require('../../models');
 const withAuth = require("../../utils/auth");

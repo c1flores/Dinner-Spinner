@@ -1,6 +1,8 @@
+//Dependencies & enable access to env variables
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
+//Use env variables to connect to database
 const sequelize = new Sequelize(
   process.env.DB_NAME,
   process.env.DB_USER,
