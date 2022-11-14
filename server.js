@@ -53,7 +53,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 app.get("/addRecipe", (req, res) => {
-  res.render("upload")
+  res.render("addRecipe")
 });
 
 app.post("/addRecipe", upload.single("image"), (req, res) => {
