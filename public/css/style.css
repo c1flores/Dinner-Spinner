@@ -135,12 +135,3 @@ margin: 10px 0;
 .recipe-col:hover {
 box-shadow: 0 0 20px 0px #747474;
 }
-
-#ing1, #ing2, #ing3, #ing4, #ing5, #ing6, #ing7, #ing8, #ing9, #ing10, #recipeSteps {
-  margin-right: 50px;
-  margin-top: 15px; 
-}
-
-#ing1amount, #ing2amount, #ing3amount, #ing4amount, #ing5amount, #ing6amount, #ing7amount, #ing8amount, #ing9amount, #ing10amount {
-  margin-top: 18px;
-}

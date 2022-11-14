@@ -2,12 +2,13 @@ const newFormHandler = async (event) => {
     event.preventDefault();
 
     const recipeName = document.querySelector('#recipe-name').value.trim();
-    const instruction = document.querySelector('#recipe-instr').value.trim();
+    const ingredients = document.querySelector("#recipe-ing").value.trim();
+    const instructions = document.querySelector("#recipe-instr").value.trim();
 
-    if (recipeName && instruction) {
+    if (recipeName && ingredients && instructions) {
         const response = await fetch('/api/recipes', {
             method: 'POST',
-            body: JSON.stringify({ recipeName, instruction}),
+            body: JSON.stringify({ recipeName, ingredients, instructions }),
             // do not change this c in content-Type
             headers: {'content-Type': 'application/json'},
         });
@@ -15,7 +16,7 @@ const newFormHandler = async (event) => {
         if (response.ok) {
             document.location.replace('/profile');
         } else {
-            alert('Failes to create recipe');
+            alert('Failed to create recipe');
         }
     }
 };
@@ -38,9 +39,12 @@ const delButtonHandler = async (event) => {
 
 
 document
-    .querySelector('.new-recipe-form')
+    .querySelector('#main-form')
     .addEventListener('submit', newFormHandler);
 
 document
     .querySelector('.recipe-list')
     .addEventListener('click', delButtonHandler);
+
+
+    
