@@ -15,12 +15,13 @@ Recipe.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        instruction: {
+        ingredients: {
+          type: DataTypes.STRING,
+          allowNull: false
+        },
+        instructions: {
             type: DataTypes.STRING, 
             allowNull: false,
-          },
-        ingreadiants: {
-            type: DataTypes.STRING,
           },
           date_created: {
             type: DataTypes.DATE,
