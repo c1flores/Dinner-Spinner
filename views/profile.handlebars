@@ -1,59 +1,47 @@
-<div class="row">
-    <div class="col-auto">
-        <h2> Welcome! </h2>
-    </div>
-</div>
+       <!-- Profile Page HTML -->
+<div class="eight wide column">
+    <h3>Talk about your new favorite recipe:</h3>
 
-    <div class="eight wide column">
-        <h3>Talk about your new favorite recipe:</h3>
-
-        <form class="ui form" id="main-form">
-            <div class="field">
+    <div class="ui grid">
+        <div class="three column row" id="main-form">
+            <div class="ui form column">
                 <label for="recipe-name">Recipe Name:</label>
-                <input class="form-input" type="text" id="recipe-name" name="recipe-name"/>
+                <textarea class="form-input" type="text" id="recipe-name" name="recipe-name"></textarea>
             </div>
-            <div class="ui form">
-                <div class="field">
+            <div class="ui form column">
                 <label for="recipe-ing">Ingredients:</label>
                 <textarea class="form-input" id="recipe-ing" name="recipe-ing"></textarea>
             </div>
 
-            <div class="ui form">
+            <div class="ui form column">
                 <label for="recipe-instr">Instructions:</label>
                 <textarea class="form-input" id="recipe-instr" name="recipe-instr"></textarea>
             </div>
             <div class="ui form">
-                <button type="submit" class="positive ui button">Create</button>
+                <button type="submit" class="positive ui button fluid ui button">Create</button>
             </div>
-        </form>
+        </div>
     </div>
 
     {{#if recipe.length}}
     <div class="eight wide column recipe-list">
         <h3>Personal Recipes:</h3>
 
-        {{#each recipe as |recipe|}}
+        {{#each recipes as |recipe|}}
         <div class="empty-div">
             <h4><a href="/recipe/{{recipe.id}}">{{recipe.name}}</a></h4>
         </div>
         <div class="empty-div">
-            <button class="btn btn-sm btn-danger" data-id="{{recipe.id}}"DELETE></button>
+            <button class="btn btn-sm btn-danger" data-id="{{recipe.id}}" DELETE></button>
         </div>
         {{/each}}
     </div>
     {{/if}}
 
 
-{{#each recipes as |recipe| }}
-<div class="eight wide column">
-    <div class="empty-div">
-        <h2> 
-        <a href="/recipe/{{recipe.id}}">{{recipe.recipeName}}</a>
-        </h2>
-        <p>{{recipe.ingredients}}</p>
-        <p>{{recipe.instruction}}</p>
-    </div> 
-</div>
-{{/each}}
+    
 
-<script src="./js/profile.js"></script>
+    <script src="./js/profile.js"></script>
+    
+    <!-- WIP -->
+    <script src="./js/recipe.js"></script>

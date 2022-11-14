@@ -1,3 +1,4 @@
+// Add a recipe form logic in profile page
 const newFormHandler = async (event) => {
     event.preventDefault();
 
@@ -40,7 +41,7 @@ const delButtonHandler = async (event) => {
 
 document
     .querySelector('#main-form')
-    .addEventListener('submit', newFormHandler);
+    .addEventListener('click', newFormHandler);
 
 document
     .querySelector('.recipe-list')
