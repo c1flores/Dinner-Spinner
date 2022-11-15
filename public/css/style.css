@@ -53,7 +53,7 @@ font-size: 17px;
 content: '';
 width: 0%;
 height: 2px;
-background: #e4321b;
+background: #f4bc1c;
 display: block;
 margin: auto;
 transition: 0.5s;
@@ -85,14 +85,14 @@ color: #fff;
 border: 1px solid #fff;
 padding: 12px 34px;
 font-size: 16px;
-background: transparent;
+background: #f4ba1c71;
 position: relative;
 cursor: pointer;
 text-decoration: none;
 }
 .hero-btn:hover {
-border:1px solid #e4321b93;
-background: #e4321b93;
+border:1px solid #f4bc1c;
+background: #f4bc1c;
 text-decoration: none;
 color: #fff;
 transition: 1s;
@@ -157,10 +157,6 @@ h2 {
 box-shadow: 0 0 20px 0px #747474;
 }
 
-label {
-  color: whitesmoke;
-}
-
 .positive-ui-button {
   padding-top: 15px;
 }
@@ -171,6 +167,7 @@ p {
 
 .solo {
   border: 10px;
+}
 
 .recipe-card {
 width:100%;
@@ -196,3 +193,95 @@ padding-top: 20px;
   font-family: 'Poppins', sans-serif;
   font-size: 30px;
   font-weight: lighter;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  max-width: 300px;
+  width: 90%;
+  padding: 100px;
+  box-shadow: 0px 0px 20px #00000020;
+  border-radius: 8px;
+  background-color: white;
+}
+.step {
+  display: none;
+}
+.step.active {
+  display: block;
+}
+.form-group {
+  width: 100%;
+  margin-top: 20px;
+}
+.form-group input {
+  width: 100%;
+  border: 1.5px solid rgba(128, 128, 128, 0.418);
+  padding: 5px;
+  font-size: 18px;
+  margin-top: 5px;
+  border-radius: 4px;
+}
+
+button.next-btn,
+button.previous-btn,
+button.submit-btn {
+  float: right;
+  margin-top: 100px;
+  padding: 10px 30px;
+  font-size: 18px;
+}
+button.previous-btn {
+  float: left;
+}
+
+button.next-btn,
+button.previous-btn,
+button.submit-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 12px;
+  padding: 12px 34px;
+  top: 20px;
+  font-size: 16px;
+  background: #f4ba1c71;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  }
+
+  button.next-btn:hover,
+  button.previous-btn:hover,
+  button.submit-btn:hover {
+  border:1px solid #f4bc1c;
+  background: #f4bc1c;
+  text-decoration: none;
+  color: #fff;
+  transition: 1s;
+  }
+
+label {
+  color: #000000;
+  font-size:  26px;
+}
+
+.form-group {
+  text-align: center;
+}
+
+label::placeholder {
+  color: #000000;
+}
+
+nav .fa {
+  display: none;
+}
+/* These are media Queries */
