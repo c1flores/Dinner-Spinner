@@ -57,8 +57,13 @@ app.get("/recipe", (req, res) => {
   res.render("recipe")
 });
 
+
+app.post("/recipe", upload.single("image"), (req, res) => {
+});
+
 app.post("/recipe", upload.single("image")), (req, res) => {
 }
+
 
 app.get("/addRecipe", (req, res) => {
   res.render("addRecipe")
