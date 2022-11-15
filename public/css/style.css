@@ -344,3 +344,40 @@ label {
  font-size: 20px;
 }
 }
+
+/* About Page */
+
+.ui.items>.item>.content p {
+  margin-right: 15px;
+  font-size: 18px;
+}
+.ui.items>.item>.image {
+  margin-left: 15px;
+  margin-bottom: 45px;
+  border-radius: 10px;
+  border-width: 10px;
+}
+#about-me-image #about-me-description #about-me-card {
+  margin-left: 20px;
+}
+#about-me-banner {
+  font-size: 30px;
+  background: #f4ba1c71;
+  border-radius: 10px;
+  border-width: 10px;
+}
+
+.ui.centered.card {
+  align-items: center;
+  border-radius: 10px;
+  border-width: 10px;
+  font-weight: bold;
+}
+.ui.centered.grid {
+  justify-content: space-between;
+  margin-top: 75px;
+}
+
+.ui.centered.banner.test.ad {
+  margin-top: 25px;
+}
