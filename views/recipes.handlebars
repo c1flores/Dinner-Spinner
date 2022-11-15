@@ -1,13 +1,26 @@
 <!-- List of Recipes HTML -->
+
+
+
+  <div class="eight wide column center-text">
+
+{{#each recipes as |recipe|}}
+  <div class="eight wide column">
+
 {{#each recipes as |recipe|}}
 
   <div class="eight wide column center-text">
+
 
     <div class="empty-div">
       <h2>
         <a href="/recipe/{{recipe.id}}">{{recipe.recipeName}}</a>
       </h2>
       <p>Created by {{recipe.user.name}} on {{format_date}}</p>
+
+      {{!-- <p>{{recipe.ingredients}}</p> --}}
+      {{!-- <p>{{recipe.instructions}}</p> --}}
+
       <p>{{recipe.ingredients}}</p>
       <p>{{recipe.instructions}}</p>
     </div>
@@ -113,6 +126,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </div>

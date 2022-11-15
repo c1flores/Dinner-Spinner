@@ -148,6 +148,7 @@ h3 {
   color: whitesmoke;
   }
 
+
 h2 {
   color: whitesmoke;
 }
@@ -167,6 +168,10 @@ label {
 p {
   color: whitesmoke;
 }
+
+.solo {
+  border: 10px;
+
 .recipe-card {
 width:100%;
 color: #fff;
@@ -191,4 +196,3 @@ padding-top: 20px;
   font-family: 'Poppins', sans-serif;
   font-size: 30px;
   font-weight: lighter;
-}
