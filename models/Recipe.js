@@ -14,14 +14,20 @@ Recipe.init(
         recipeName: {
             type: DataTypes.STRING,
             allowNull: false,
+            char: (255),
         },
         ingredients: {
-          type: DataTypes.STRING,
-          allowNull: false
+          type: DataTypes.TEXT,
+          allowNull: false,
+          
         },
         instructions: {
-            type: DataTypes.STRING, 
+            type: DataTypes.TEXT, 
             allowNull: false,
+            
+          },
+          story: {
+            type: DataTypes.TEXT,
           },
           date_created: {
             type: DataTypes.DATE,

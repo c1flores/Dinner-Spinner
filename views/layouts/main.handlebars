@@ -25,7 +25,7 @@
             {{#if logged_in}}
               <li><a href="/">HOME</a></li>
               <li><a href="#">ABOUT</a></li>
-              <li><a href="/recipe/:id">RECIPES</a></li>
+              <li><a href="/recipes">RECIPES</a></li>
               <li><a href="/profile">PROFILE</a></li>
               <li><a id="logout">LOGOUT</a></li>
             {{else}}
@@ -35,13 +35,17 @@
         </div>
       </nav>
 
+      <!-- Dynamic HTML form handlebar -->
       <main>
         {{{body}}}
       </main>
     </section>
 
+    <!-- Footer -->
     <footer class="flex-row justify-center">
     </footer>
+
+    <!-- Make logout form logic available if logged in -->
     {{#if logged_in}}
       <script src="./js/logout.js"></script>
     {{/if}}

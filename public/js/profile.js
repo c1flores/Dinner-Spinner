@@ -1,3 +1,4 @@
+// Add a recipe form logic in profile page
 const newFormHandler = async (event) => {
     event.preventDefault();
 
@@ -9,7 +10,7 @@ const newFormHandler = async (event) => {
         const response = await fetch('/api/recipes', {
             method: 'POST',
             body: JSON.stringify({ recipeName, ingredients, instructions }),
-            // do not change this c in content-Type
+            
             headers: {'Content-Type': 'application/json'},
         });
 
@@ -40,7 +41,7 @@ const delButtonHandler = async (event) => {
 
 document
     .querySelector('#main-form')
-    .addEventListener('submit', newFormHandler);
+    .addEventListener('click', newFormHandler);
 
 document
     .querySelector('.recipe-list')

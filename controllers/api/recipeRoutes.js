@@ -1,16 +1,21 @@
+//Import router object to handle requests, import database model(s), and import helper function
 const router = require('express').Router();
 const { Recipe } = require('../../models');
 const withAuth = require("../../utils/auth");
 
 
 router.post('/', withAuth, async (req, res) => {
+    console.log('1')
     try {
         const newRecipe = await Recipe.create({
             ...req.body,
             user_id: req.session.user_id,
+            
         });
+        console.log('2')
         res.status(200).json(newRecipe);
     } catch (err) {
+        console.log(err)
         res.status(400).json(err);
     }
 });

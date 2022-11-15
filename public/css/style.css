@@ -126,12 +126,35 @@ padding: 20px 12px;
 box-sizing: border-box;
 transition: 0.5s;
 }
+
 h3 {
 text-align: center;
 font-weight: 600;
 margin: 10px 0;
+color: whitesmoke;
+}
+
+h2 {
+  color: whitesmoke;
 }
 
 .recipe-col:hover {
 box-shadow: 0 0 20px 0px #747474;
+}
+
+label {
+  color: whitesmoke;
+}
+
+.positive-ui-button {
+  padding-top: 15px;
+}
+
+p {
+  color: whitesmoke;
+}
+
+
+.solo {
+  border: 10px;
 }
