@@ -80,7 +80,7 @@ nextBtn.forEach((button) => {
 
 document
     .querySelector('.submit-btn')
-    .addEventListener('submit', newFormHandler);
+    .addEventListener('click', newFormHandler);
 
 document
     .querySelector('.recipe-list')
