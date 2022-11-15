@@ -40,8 +40,10 @@ router.get('/recipe/:id', async (req, res) => {
         });
 
         const recipe = recipeData.get({ plain: true});
+
         console.log('3')
         res.render('recipe', {
+
             ...recipe,
             logged_in: req.session.logged_in
         });
