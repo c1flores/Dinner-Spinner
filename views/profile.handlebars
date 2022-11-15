@@ -23,16 +23,20 @@
         </div>
     </div>
 
-    {{#if recipe.length}}
+    {{#if recipes.length}}
     <div class="eight wide column recipe-list">
         <h3>Personal Recipes:</h3>
 
         {{#each recipes as |recipe|}}
         <div class="empty-div">
-            <h4><a href="/recipe/{{recipe.id}}">{{recipe.name}}</a></h4>
+            <h4><a href="/recipe/{{recipe.id}}">{{recipe.recipeName}}</a></h4>
         </div>
+        <p>Created on {{format_date}}</p>
+        <p>{{recipe.ingredients}}</p>
         <div class="empty-div">
-            <button class="btn btn-sm btn-danger" data-id="{{recipe.id}}" DELETE></button>
+
+            <button class="button btn-danger" data-id="{{recipe.id}}" DELETE></button>
+
         </div>
         {{/each}}
     </div>
@@ -44,4 +48,8 @@
     <script src="./js/profile.js"></script>
     
     <!-- WIP -->
+
+    <!--<script src="./js/recipe.js"></script> -->
+
     <script src="./js/recipe.js"></script>
+

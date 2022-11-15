@@ -26,24 +26,30 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/recipe/:id', async (req, res) => {
+    console.log('1')
     try {
         const recipeData = await Recipe.findByPk(req.params.id, {
+            
             include: [
                 {
                     module: User,
                     attributes: ['name'],
                 },
+                console.log('2')
             ],
         });
 
         const recipe = recipeData.get({ plain: true});
 
-        res.render('recipes', {
+        console.log('3')
+        res.render('recipe', {
+
             ...recipe,
             logged_in: req.session.logged_in
         });
     } catch (err) {
         res.status(500).json(err);
+        console.log(err)
     }
 });
 
@@ -53,15 +59,13 @@ router.get('/profile', withAuth, async (req, res) => {
             attributes: { exclude: ['password']},
             include: [{ model: Recipe }],
         });
-        console.log('working')
+        
         const user = userData.get({ plain: true});
-
         res.render('profile', {
             ...user,
             logged_in: true
         });
     } catch (err) {
-        console.log(err)
         res.status(500).json(err);
    }
 
