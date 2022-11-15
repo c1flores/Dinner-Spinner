@@ -24,7 +24,10 @@
     </div>
 
     {{#if recipes.length}}
-    <div class="eight wide column recipe-list ">
+
+
+    <div class="eight wide column recipe-list">
+
         <h3>Personal Recipes:</h3>
 
         {{#each recipes as |recipe|}}
@@ -32,10 +35,17 @@
             <h4><a href="/recipe/{{recipe.id}}">{{recipe.recipeName}}</a></h4>
         </div>
         <p>Created on {{format_date}}</p>
+
         
         <div class="empty-div ">
 
             <button class="negative ui button ui btn-danger" data-id="{{recipe.id}}">DELETE</button>
+
+        <p>{{recipe.ingredients}}</p>
+        <div class="empty-div">
+
+            <button class="button btn-danger" data-id="{{recipe.id}}" DELETE></button>
+
 
         </div>
         {{/each}}
