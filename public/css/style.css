@@ -196,6 +196,8 @@ padding-top: 20px;
   font-weight: lighter;
 }
 
+/* Profile Page */
+
 section {
   min-height: 100vh;
   width: 100%;
@@ -284,6 +286,62 @@ label::placeholder {
 
 nav .fa {
   display: none;
+}
+
+/* About Page */
+
+.ui.items>.item>.content {
+  text-align: center;
+}
+
+.ui.centered.grid {
+  width: 100%;
+}
+
+.ui.centered.card {
+  align-items: center;
+  border-radius: 10px;
+  border-width: 10px;
+  font-weight: bold;
+  width: 1000px;
+  height: 250px;
+}
+
+#about-me-banners {
+  margin: auto;
+  background: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 52px;
+}
+
+#about-me-bannerss {
+  margin: auto;
+  background: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 52px;
+}
+
+#about-me-mission {
+  margin: 40px;
+  padding: 0 150px 0 150px;
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+}
+
+.ui.items>.item>.image {
+  position: absolute;
+  top: 25%;
+  left: 37%;
+}
+
+.ui-bordered-image {
+  border-radius: 15px;
+}
+
+.ui.grid>* {
+  padding-left: 15rem;
+  padding-right: 1rem;
 }
 /* These are media Queries */
 
