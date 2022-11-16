@@ -1,17 +1,4 @@
 <!-- List of Recipes HTML -->
-{{#each recipes as |recipe|}}
-  <div class="row">
-        <div class="recipe-col">
-          <h3 class="rec-name">{{recipe.recipeName}}</h3>
-            <img src="/images/cookies.webp" alt="Cookies" class="recipe-img">
-          <h4 class="created-by">Made by {{recipe.user.name}}</h4>
-          <hr>
-          <a href="/recipe/{{recipe.id}}" class="date">Created on {{format_date}}</a>
-        </div>
-      </div>
-    </div>
-{{/each}}
-
 <section class="recipe">
     <h1>Easiy Recipes to Start With</h1>
     <p class="recipe-desc">Get started on cooking with some popular choices by our community</p>
@@ -22,7 +9,7 @@
             <img src="/images/cookies.webp" alt="Cookies" class="recipe-img">
           <h4 class="created-by">Made by Daniel</h4>
           <hr>
-          <a href="#" class="date">Created on 11/14/22</a>
+          <a href="/cookie" class="date">Created on 11/14/22</a>
         </div>
       <div class="recipe-col">
         <h3 class="rec-name">Extra Cheesy Pizza</h3>
@@ -40,3 +27,17 @@
       </div>
     </div>
 </section>
+
+
+{{#each recipes as |recipe|}}
+  <div class="row">
+        <div class="recipe-card">
+          <h3 class="rec-name">{{recipe.recipeName}}</h3>
+            <img src="..." alt="Placeholder" class="recipe-img">
+          <h4 class="created-by">Made by {{recipe.user.name}}</h4>
+          <hr>
+          <a href="/recipe/{{recipe.id}}" class="date">Created on {{format_date}}</a>
+        </div>
+      </div>
+    </div>
+{{/each}}
