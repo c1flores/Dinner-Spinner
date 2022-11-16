@@ -21,6 +21,11 @@ Recipe.init(
           allowNull: false,
           
         },
+        food_image:{
+          type: DataTypes.STRING,
+          allowNull: false,
+          char: (100),
+        },
         instructions: {
             type: DataTypes.TEXT, 
             allowNull: false,
