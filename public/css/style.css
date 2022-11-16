@@ -13,10 +13,14 @@ padding: 0;
 font-family: 'Poppins', sans-serif;
 }
 
+#logout {
+  color:#fff;
+}
+
 .hero {
 min-height: 100vh;
 width:100%;
-background-image: linear-gradient(#04091eb3, #04091eb3),url(../images/OIP.jpg);
+background-image: linear-gradient(#04091eb3, #04091eb3),url(../images/OOP.jpg);
 background-position: center;
 background-size: cover;
 position: relative;
@@ -49,7 +53,7 @@ font-size: 17px;
 content: '';
 width: 0%;
 height: 2px;
-background: #bd8d0c;
+background: #f4bc1c;
 display: block;
 margin: auto;
 transition: 0.5s;
@@ -79,15 +83,19 @@ display: inline-block;
 text-decoration: none;
 color: #fff;
 border: 1px solid #fff;
+border-radius: 25px;
 padding: 12px 34px;
 font-size: 16px;
-background: transparent;
+background: #f4ba1c71;
 position: relative;
 cursor: pointer;
+text-decoration: none;
 }
 .hero-btn:hover {
-border:1px solid #bd8d0c;
-background: #bd8d0c;
+border:1px solid #f4bc1c;
+background: #f4bc1c;
+text-decoration: none;
+color: #fff;
 transition: 1s;
 }
 
@@ -103,7 +111,7 @@ font-size: 36px;
 font-weight: 600;
 }
 
-p {
+.home {
 color: #353535;
 font-size: 20px;
 font-weight: 300;
@@ -134,6 +142,14 @@ margin: 10px 0;
 color: whitesmoke;
 }
 
+h3 {
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+  color: whitesmoke;
+  }
+
+
 h2 {
   color: whitesmoke;
 }
@@ -142,14 +158,284 @@ h2 {
 box-shadow: 0 0 20px 0px #747474;
 }
 
-label {
-  color: whitesmoke;
-}
-
 .positive-ui-button {
   padding-top: 15px;
 }
 
 p {
   color: whitesmoke;
+}
+
+.solo {
+  border: 10px;
+}
+
+.recipe-card {
+width:100%;
+color: #fff;
+position: absolute;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+justify-content: center;
+padding-top: 20px;
+}
+
+.ui.grid>.column:only-child, .ui.grid>.row>.column:only-child {
+  width: 35%;
+}
+
+.ui.brown.button, .ui.brown.buttons .button {
+  background-color: #f4bc1c;
+}
+
+.ui.header .content {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+/* Profile Page */
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  max-width: 300px;
+  width: 90%;
+  padding: 100px;
+  box-shadow: 0px 0px 20px #00000020;
+  border-radius: 8px;
+  background-color: white;
+}
+.step {
+  display: none;
+}
+.step.active {
+  display: block;
+}
+.form-group {
+  width: 100%;
+  margin-top: 20px;
+}
+.form-group input {
+  width: 100%;
+  border: 1.5px solid rgba(128, 128, 128, 0.418);
+  padding: 5px;
+  font-size: 18px;
+  margin-top: 5px;
+  border-radius: 4px;
+}
+
+button.next-btn,
+button.previous-btn,
+button.submit-btn {
+  float: right;
+  margin-top: 100px;
+  padding: 10px 30px;
+  font-size: 18px;
+}
+button.previous-btn {
+  float: left;
+}
+
+button.next-btn,
+button.previous-btn,
+button.submit-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  padding: 12px 34px;
+  top: 20px;
+  font-size: 16px;
+  background: #f4ba1c71;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  }
+
+  button.next-btn:hover,
+  button.previous-btn:hover,
+  button.submit-btn:hover {
+  border:1px solid #f4bc1c;
+  background: #f4bc1c;
+  text-decoration: none;
+  color: #fff;
+  transition: 1s;
+  }
+
+label {
+  color: #000000;
+  font-size:  26px;
+}
+
+.form-group {
+  text-align: center;
+}
+
+label::placeholder {
+  color: #000000;
+}
+
+nav .fa {
+  display: none;
+}
+
+/* About Page */
+
+.ui.items>.item>.content {
+  text-align: center;
+}
+
+.ui.centered.grid {
+  width: 100%;
+}
+
+.ui.centered.card {
+  align-items: center;
+  border-radius: 10px;
+  border-width: 10px;
+  font-weight: bold;
+  width: 1000px;
+  height: 250px;
+}
+
+#about-me-banners {
+  margin: auto;
+  background: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 52px;
+}
+
+#about-me-bannerss {
+  margin: auto;
+  background: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 52px;
+}
+
+#about-me-mission {
+  margin: 40px;
+  padding: 0 150px 0 150px;
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+}
+
+.ui.items>.item>.image {
+  position: absolute;
+  top: 25%;
+  left: 37%;
+}
+
+.ui-bordered-image {
+  border-radius: 15px;
+}
+
+.ui.grid>* {
+  padding-left: 15rem;
+  padding-right: 1rem;
+}
+/* These are media Queries */
+
+@media(max-width: 760px) {
+  /* HomePage */
+  .text-box p {
+    font-size: 18px;
+  }
+  .text-box h1 {
+    font-size: 30px;
+  }
+  .nav-links ul li {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    background: #f4ba1c;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -210;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+  }
+  nav .fa {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+    float: right;
+  }
+  .nav-links ul {
+    padding: 30px;
+  }
+
+  /* Log-In Page */
+
+.ui.grid>.column:only-child, .ui.grid>.row>.column:only-child {
+    width: 100%;
+    margin-top: 175px;
+    left: 35px;
+}
+
+.ui.grid>.row>[class*="center aligned"].column.column, .ui.grid>[class*="center aligned"].column.column, .ui.grid>[class*="center aligned"].row>.column, .ui[class*="center aligned"].grid>.column, .ui[class*="center aligned"].grid>.row>.column {
+  text-align: center;
+  -ms-flex-item-align: inherit;
+  align-self: inherit;
+}
+
+/* Profile Page */
+
+.container {
+  margin-top: 165px;
+}
+label {
+ font-size: 20px;
+}
+}
+
+/* About Page */
+
+.ui.items>.item>.content p {
+  margin-right: 15px;
+  font-size: 18px;
+}
+.ui.items>.item>.image {
+  margin-left: 15px;
+  margin-bottom: 45px;
+  border-radius: 10px;
+  border-width: 10px;
+}
+#about-me-image #about-me-description #about-me-card {
+  margin-left: 20px;
+}
+#about-me-banner {
+  font-size: 30px;
+  background: #f4ba1c71;
+  border-radius: 10px;
+  border-width: 10px;
+}
+
+.ui.centered.card {
+  align-items: center;
+  border-radius: 10px;
+  border-width: 10px;
+  font-weight: bold;
+}
+.ui.centered.grid {
+  justify-content: space-between;
+  margin-top: 75px;
+}
+
+.ui.centered.banner.test.ad {
+  margin-top: 25px;
 }

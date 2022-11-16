@@ -1,17 +1,15 @@
        <!-- Profile Page HTML -->
-<div class="eight wide column">
-    <h3>Talk about your new favorite recipe:</h3>
-
-    <div class="ui grid">
-        <div class="three column row" id="main-form">
-            <div class="ui form column">
-                <label for="recipe-name">Recipe Name:</label>
-                <textarea class="form-input" type="text" id="recipe-name" name="recipe-name"></textarea>
-            </div>
-            <div class="ui form column">
-                <label for="recipe-ing">Ingredients:</label>
-                <textarea class="form-input" id="recipe-ing" name="recipe-ing"></textarea>
-            </div>
+<section>
+  <div class="container">
+    <form>
+    <div class="main-form">
+      <div class="step step-1 active">
+        <div class="form-group">
+          <label for="recipe-name">Lets Start with the name of your Dish !</label>
+          <input type="text" id="recipe-name" name="recipe-name" placeholder="Enter Dish Name Here !">
+        </div>
+        <button type="button" class="next-btn">Next</button>
+      </div>
 
             <div class="ui form column">
                 <label for="recipe-instr">Instructions:</label>
@@ -29,10 +27,20 @@
             </div>
             
         </div>
-    </div>
+        <button type="button" class="previous-btn">Prev</button>
+        <button type="submit" class="submit-btn">Submit</button>
+      </div>
+
+    </form>
+  </div>
+  </div>
+</section>
 
     {{#if recipes.length}}
+
+
     <div class="eight wide column recipe-list">
+
         <h3>Personal Recipes:</h3>
 
         {{#each recipes as |recipe|}}
@@ -40,10 +48,17 @@
             <h4><a href="/recipe/{{recipe.id}}">{{recipe.recipeName}}</a></h4>
         </div>
         <p>Created on {{format_date}}</p>
+
+        
+        <div class="empty-div ">
+
+            <button class="negative ui button ui btn-danger" data-id="{{recipe.id}}">DELETE</button>
+
         <p>{{recipe.ingredients}}</p>
         <div class="empty-div">
 
             <button class="button btn-danger" data-id="{{recipe.id}}" DELETE></button>
+
 
         </div>
         {{/each}}

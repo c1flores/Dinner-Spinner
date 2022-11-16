@@ -30,14 +30,17 @@ router.get('/recipe/:id', async (req, res) => {
     try {
         const recipeData = await Recipe.findByPk(req.params.id, {
             
+
+
             include: [
+
                 {
-                    module: User,
-                    attributes: ['name'],
+                    model: User,
+                    attributes: ["name"],
                 },
-                console.log('2')
+
             ],
-        });
+        }); 
 
         const recipe = recipeData.get({ plain: true});
 
@@ -112,4 +115,15 @@ router.get('/recipes', async (req, res) => {
     }
 });
 
+
+
+router.get('/about', (req, res) => {
+
+    if (req.session.logged_in) {
+        res.redirect('/about');
+        return;
+    }
+
+    res.render('about');
+});
 module.exports = router;
