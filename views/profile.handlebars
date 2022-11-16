@@ -45,19 +45,27 @@
   </div>
   </div>
 </section>
-
+<section class="recipe">
     {{#if recipes.length}}
 
 
     <div class="eight wide column recipe-list">
 
         <h3>Personal Recipes:</h3>
-
+    {{!-- <div class="row "> --}}
         {{#each recipes as |recipe|}}
-        <div class="empty-div">
+        {{!-- <div class="empty-div">
             <h4><a href="/recipe/{{recipe.id}}">{{recipe.recipeName}}</a></h4>
+        </div> --}}
+        <div class="recipe-col">
+          <h3 class="rec-name">{{recipe.recipeName}}</h3>
+            <img src="..." alt="Placeholder" class="recipe-img"{{food_image}}>
+          <h4 class="created-by">Made by {{recipe.user.name}}</h4>
+          <hr>
+          <a href="/recipe/{{recipe.id}}" class="date">Created on {{format_date}}</a>
         </div>
-        <p>Created on {{format_date}}</p>
+
+        {{!-- <p>Created on {{format_date}}</p> --}}
 
         
         <div class="empty-div ">
@@ -72,9 +80,10 @@
 
         </div>
         {{/each}}
+    </div>    
     </div>
     {{/if}}
-
+</section>
 
     
 
