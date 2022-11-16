@@ -355,6 +355,29 @@ nav .fa {
   padding-left: 15rem;
   padding-right: 1rem;
 }
+
+/* Recipe Specific Page */
+
+.card-body p {
+  color: #000000;
+  margin: 20px 100px 20px 100px;
+  padding: 20px 0 20px 0;
+  line-height: 2;
+}
+.card {
+  margin-top: 1000px;
+}
+
+.card-header {
+  color: #000000;
+  margin-top: 50px;
+}
+
+.card-body h2 {
+  color: #000000;
+  margin: 20px;
+}
+
 /* These are media Queries */
 
 @media(max-width: 760px) {

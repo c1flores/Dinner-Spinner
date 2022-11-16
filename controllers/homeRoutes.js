@@ -126,4 +126,9 @@ router.get('/about', (req, res) => {
 
     res.render('about');
 });
+
+router.get('/cookie', (req, res) => {
+
+    res.render('static-recipe');
+});
 module.exports = router;
