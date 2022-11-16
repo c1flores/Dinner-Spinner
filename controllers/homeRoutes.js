@@ -115,16 +115,18 @@ router.get('/recipes', async (req, res) => {
     }
 });
 
-
-
 router.get('/about', (req, res) => {
+
+      res.render('about');
+
 
     // if (req.session.logged_in) {
     //     res.redirect('/');
     //     return;
     // }
 
-    res.render('about');
+
+
 });
 
 router.get('/cookie', (req, res) => {
