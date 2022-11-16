@@ -1,55 +1,21 @@
-
-
-
-
-
-<div class="card  text-white text-box solo">
+<section>
+<div class="card text-white text-box solo">
   <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-    {{#if food_image}}
-      <img src="{{food_image}}" class="img-fluid" />
-
-    {{else}}
-      <img src="" class="img-fluid" />
-      
-    <a href="#!">
+    <img src="..." class="img-fluid" />
       <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
     </a>
   </div>
-  <div class="card-header"><h1>{{user.name}}'s</h1></div>
+  <div class="card-header"><h1>{{user.name}}'s {{recipeName}}</h1></div>
   <div class="card-body">
-    <h2 class="card-title">{{recipeName}}</h2>
+    <h2 class="info-header">Let's start with the ingredients.</h2>
+    <hr>
     <p class="card-text solo">{{ingredients}}</p>
+    <hr>
+    <h2 class="info-header">Now for the instructions.</h2>
+    <hr>
     <p class="card-text solo">{{instructions}}</p>
 
   </div>
   <div class="card-footer">Posted on {{format_date}}</div>
 </div>
-
-  <section class="recipe">
-    <h1>Easiy Recipes to Start With</h1>
-    <p>Get started on cooking with some popular choices by our community</p>
-
-    <div class="row">
-      <div class="recipe-col">
-        <h3>Cookies</h3>
-        <h4>By Christian</h4>
-        <p>Big Fat Chewy Cookies</p>
-      </div>
-      <div class="recipe-col">
-        <h3>Pizza</h3>
-        <h4>By Daniel</h4>
-        <p>Perfect pepperoni piiz</p>
-      </div>
-      <div class="recipe-col">
-        <h3>Cupcakes</h3>
-        <h4>By Jongwon</h4>
-        <p>Soft Sweet Cupcakes</p>
-      </div>
-      <div class="recipe-col">
-        <h3>Banana Bread</h3>
-        <h4>By William</h4>
-        <p>Soft fluffy Bread</p>
-      </div>
-    </div>
-  </section>
-
+</section>
