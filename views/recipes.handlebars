@@ -39,7 +39,7 @@
   <div class="row">
         <div class="recipe-card">
           <h3 class="rec-name">{{recipe.recipeName}}</h3>
-            <img src="..." alt="Placeholder" class="recipe-img">
+            <img src="..." alt="Placeholder" class="recipe-img"{{food_image}}>
           <h4 class="created-by">Made by {{recipe.user.name}}</h4>
           <hr>
           <a href="/recipe/{{recipe.id}}" class="date">Created on {{format_date}}</a>
