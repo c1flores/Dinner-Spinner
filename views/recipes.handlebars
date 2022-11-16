@@ -5,7 +5,7 @@
 
   <div class="eight wide column center-text">
 
-
+    <img src="{{recipe.food_image}}" alt="Recipe Image">
     <div class="empty-div">
       <h2>
         <a href="/recipe/{{recipe.id}}">{{recipe.recipeName}}</a>
@@ -106,6 +106,39 @@
         </div>
         <div class="extra content">
           <a href="/recipe/recipe.id">Nice round fluffy donuts</a>
+        </div>
+      </div>
+      <div class="recipe-card">
+      <p class="button-card">
+        <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">View Ingredients</button>
+      </p>
+      <div class="row">
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body bg-transparent text-white">
+              Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+      <div class="ui card recipe-card">
+        <div class="image">
+          <img src="..." alt="...">
+        </div>
+        <div class="content">
+          <a class="header">Frosted Cupcakes</a>
+          <div class="meta">
+            <span class="date">Created on 11/14/22</span>
+          </div>
+          <div class="description">
+            Created By Jongwon
+          </div>
+        </div>
+        <div class="extra content">
+          <a href="/recipe/recipe.id">Super Sweet Cupcakes</a>
         </div>
       </div>
       <div class="recipe-card">

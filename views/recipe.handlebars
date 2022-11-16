@@ -5,7 +5,12 @@
 
 <div class="card  text-white text-box solo">
   <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-    <img src="" class="img-fluid" />
+    {{#if food_image}}
+      <img src="{{food_image}}" class="img-fluid" />
+
+    {{else}}
+      <img src="" class="img-fluid" />
+      
     <a href="#!">
       <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
     </a>
@@ -37,7 +42,7 @@
       </div>
       <div class="recipe-col">
         <h3>Cupcakes</h3>
-        <h4>By Lee</h4>
+        <h4>By Jongwon</h4>
         <p>Soft Sweet Cupcakes</p>
       </div>
       <div class="recipe-col">

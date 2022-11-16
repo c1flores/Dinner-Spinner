@@ -2,7 +2,7 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-const multer = require('multer');
+const fileUpload = require('express-fileupload');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const routes = require('./controllers');
@@ -29,50 +29,40 @@ const sess = {
 
 app.use(session(sess));
 
-const hbs = exphbs.create({ helpers });
-
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(routes);
 
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-      cb(null, 'upload');
-  },
-  filename: (req, file, cb)=> {
-      console.log(file);
-      cb(null, Date.now() + path.extname(file.originalname));
+app.use(fileUpload());
+
+const hbs = exphbs.create({ helpers });
+
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+
+// app.get('/', (req, res) => {
+//   res.render('profile');
+// });
+
+app.post('/profile', (req, res) => {
+  let image;
+  let uploadPath
+
+  if(!req.files || Object.keys(req.files).length === 0){
+    return res.status(400).send("No files were uploaded");
   }
-})
 
-const upload = multer({ storage: storage });
+  image = req.files.image;
+  uploadPath = __dirname + '/test/' + image.name;
 
-
-app.get("/recipe", (req, res) => {
-  res.render("recipe")
-});
-
-
-app.post("/recipe", upload.single("image"), (req, res) => {
-});
-
-app.post("/recipe", upload.single("image")), (req, res) => {
-}
-
-
-app.get("/addRecipe", (req, res) => {
-  res.render("addRecipe")
-});
-
-app.post("/addRecipe", upload.single("image"), (req, res) => {
-
+  image.mv(uploadPath, function(err) {
+    if(err) return res.status(500).send(err);
   
-});
+    res.send('File Uploaded')
+  });
+})
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
