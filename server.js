@@ -33,6 +33,7 @@ const hbs = exphbs.create({ helpers });
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+app.set('views', './views');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -40,32 +41,30 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(routes);
 
+app.get('/', (req, res) =>{
+  res.render('profile');
+});
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-      cb(null, 'upload');
+    cb(null, './public/uploads/')
   },
   filename: (req, file, cb)=> {
-      console.log(file);
-      cb(null, Date.now() + path.extname(file.originalname));
+      cb(null, file.fieldname + "-" + Date.now() + ".jpg");
   }
 })
 
-const upload = multer({ storage: storage });
+var upload = multer({ storage: storage });
 
+app.use(express.static(__dirname + '/views'));
+app.use('/uploads', express.static('uploads'));
 
-app.get("/recipe", (req, res) => {
-  res.render("recipe")
-});
-
-app.post("/recipe", upload.single("image"), (req, res) => {
-
-app.get("/addRecipe", (req, res) => {
-  res.render("addRecipe")
-});
-
-app.post("/addRecipe", upload.single("image"), (req, res) => {
-
-  
+app.post('/profile', upload.single('image'), function (req, res, next) {
+  console.log(JSON.stringify(req.file))
+  // var response = '<a href="/">Home</a><br>'
+  // response += "Files uploaded successfully.<br>"
+  // response += `<img src="${req.file.path}" /><br>`
+  // return res.send(response)
 });
 
 sequelize.sync({ force: false }).then(() => {

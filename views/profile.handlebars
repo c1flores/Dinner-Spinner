@@ -17,9 +17,17 @@
                 <label for="recipe-instr">Instructions:</label>
                 <textarea class="form-input" id="recipe-instr" name="recipe-instr"></textarea>
             </div>
+            <div class="ui form column">
+                <label for="recipe-img">Upload Image:</label>
+                <form action="/profile" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="image">
+                    <input type="submit">
+                </form>
+            </div>
             <div class="ui form">
                 <button type="submit" class="positive ui button fluid ui button">Create</button>
             </div>
+            
         </div>
     </div>
 
