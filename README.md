@@ -35,8 +35,9 @@ Then I am redirected to the beginning of the user-experience of the application
 - <a href="https://dev.mysql.com/" title="MySQL"><img src="https://github.com/get-icon/geticon/raw/master/icons/mysql.svg" alt="MySQL" width="21px" height="21px"></a> - MySQL
 - <a href="https://code.visualstudio.com/" title="Visual Studio Code"><img src="https://github.com/get-icon/geticon/raw/master/icons/visual-studio-code.svg" alt="Visual Studio Code" width="21px" height="21px"></a> - Visual Studio Code
 
-## Screen Capture
-![](To Do)
+## Screenshot
+
+![Desktop Screenshot 2022 11 16 - 21 42 35 43](https://user-images.githubusercontent.com/109697090/202366570-53b498be-0eb2-4f52-bf1e-f513e5b68f0b.png)
 
 ## Live Application
 [Deployed Application Link](To Do)
