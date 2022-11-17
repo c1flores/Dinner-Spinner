@@ -39,7 +39,7 @@ Then I am redirected to the beginning of the user-experience of the application
 ![](To Do)
 
 ## Live Application
-[Deployed Application Link](To Do)
+https://dinner-spinnerrr.herokuapp.com/
 
 ## Contributors
 - [William Paul](https://github.com/Alwayswithaname)
