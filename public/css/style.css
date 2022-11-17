@@ -32,7 +32,11 @@ justify-content: space-between;
 align-items: center;
 }
 nav img {
-width: 150px;
+width: 200px;
+float: left;
+position: absolute;
+right: 90%;
+bottom: 85%;
 }
 .nav-links{
 flex: 1;
@@ -410,6 +414,9 @@ nav .fa {
 
 @media(max-width: 760px) {
   /* HomePage */
+  nav img {
+    display: none;
+  }
   .text-box p {
     font-size: 18px;
   }
