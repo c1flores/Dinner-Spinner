@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
     "bootstrap": "^5.2.2",
     "connect-session-sequelize": "^7.0.4",
     "dotenv": "^8.2.0",
