@@ -53,8 +53,8 @@ Then I am redirected to the beginning of the user-experience of the application
 
 ![Desktop Screenshot 2022 11 16 - 21 42 35 43](https://user-images.githubusercontent.com/109697090/202366570-53b498be-0eb2-4f52-bf1e-f513e5b68f0b.png)
 
-## Heroku Application Deployment
-[Deployed Application Link](https://dinner-spinnerrr.herokuapp.com/)
+## Live Application
+[Link](https://dinner-spinnerrr.herokuapp.com/)
 
 ## Contributors
 - [William Paul](https://github.com/Alwayswithaname)
