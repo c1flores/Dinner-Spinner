@@ -42,7 +42,9 @@ An food-focused online social networking service. The user can use the app to sh
 [Link](https://dinner-spinnerrr.herokuapp.com/)
 
 ## Contributors
-- [William Paul](https://github.com/Alwayswithaname)
-- [Jongwon Lee](https://github.com/JongwonLee123)
-- [Daniel Gutierrez](https://github.com/LeinadZz)
-- [Christian Flores](https://github.com/c1flores)
+
+Visit our GitHubs:  
+[William Paul](https://github.com/Alwayswithaname),
+[Jongwon Lee](https://github.com/JongwonLee123),
+[Daniel Gutierrez](https://github.com/LeinadZz),
+[Christian Flores](https://github.com/c1flores)
